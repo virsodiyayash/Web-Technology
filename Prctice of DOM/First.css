@@ -1,0 +1,18 @@
+body{
+    background-color: pink;
+}
+
+#heading{
+    color: blue;
+    background-color: yellow;
+}
+
+.main{
+    color: white;
+    background-color: green;
+}
+
+button{
+    color: white;
+    background-color: blue;
+}
