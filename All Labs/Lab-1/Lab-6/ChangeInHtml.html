@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text">
+    <button id="btn">click me</button>
+</body>
+    <script>
+        let dis = document.querySelector("#btn"); 
+        let temp = true;  
+        dis.addEventListener("click", () => {
+            let textDemo = document.querySelector("#text");
+
+            if(temp == true){
+                textDemo.type = "password";
+            }
+            else{
+                textDemo.type = "text";
+            }
+            temp =! temp;
+            
+        });
+    </script>
+</html>

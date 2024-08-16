@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+        }
+        #mouse , #key{
+            width: 80%;
+            height: 80%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="mouse">
+        <div id="cbox"></div>
+    </div>
+    <div id="key">
+        <div id="kbox"></div>
+    </div>
+</body>
+    <script>
+        mousebox = document.getElementById("mouse");
+        keybox = document.getElementById("key");
+        cbox = document.getElementById("cbox");
+        kbox = document.getElementById("kbox");
+
+
+        mousebox.addEventListener('click' , () => display("click"));
+        mousebox.addEventListener('dblclick' , () => display("Double Click"));
+        mousebox.addEventListener('mouseover' , () => display("mouseover"));
+        mousebox.addEventListener('mouseenter' , () => display("mouseenter"));
+        mousebox.addEventListener('mouseleave' , () => display("mouseleave"));
+
+        function display(str){
+            mousebox.innerHTML = str;
+            
+        }
+
+        keybox.addEventListener("keydown",(e)=>{console.log("key down : " + e.key)});
+        keybox.addEventListener("keyup",(e)=>{console.log("key up : " + e.key)});
+        keybox.addEventListener("keypress",(e)=>{console.log("key press : " + e.key)});
+        
+    </script>
+</html>
