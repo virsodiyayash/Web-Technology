@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("please enter the number = "));
+        let arr = [];
+        for(let i = 1 ; i <= num ; i++){
+            let n = prompt("Please enter the number of an array = ");
+            arr.push(n);
+        }
+
+        let max = 0;
+
+        for(let i = 1 ; i <= num ; i++){
+            if(arr[i] > max){
+                max = arr[i];
+            }
+        }
+
+        alert("Maximum number in an array is = "+max);
+    </script>
+</body>
+</html>
