@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            width: 100vw;
+        }
+        #cal{
+            height: 55%;
+            width: 20%;
+            background-color: rgb(34, 34, 34);
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+        input{
+            margin: 1.5%;
+            width: 95%;
+            color: white;
+            font-size: 30px;
+            height: 15%;
+            background-color: rgb(108, 107, 107);
+            border: 1px solid black;
+            border-radius: 20px;
+        }
+        #button{
+            display: flex;
+            height: max-content;
+            height: 83%;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        button{
+            height: 18%;
+            width: 23%;
+            margin: 1%;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: rgb(127, 127, 127);
+            color: white;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="cal">
+        <input type="text" id="screen">
+        <div id="button">
+            <button onclick=" allClear() " id="AC"> AC </button>
+            <button onclick=" back()  " id="C"> C </button>
+            <button onclick=" addNumber('%') " id="%"> % </button>
+            <button onclick=" addNumber('/') " id="/"> / </button>
+
+
+            <button onclick=" addNumber(7) " id="7"> 7 </button>
+            <button onclick=" addNumber(8) " id="8"> 8 </button>
+            <button onclick=" addNumber(9) " id="9"> 9 </button>
+            <button onclick=" addNumber('*') " id="*"> * </button>
+
+
+            <button onclick=" number+='4' " id="4"> 4 </button>
+            <button onclick=" number+='5' " id="5"> 5 </button>
+            <button onclick=" number+='6' " id="6"> 6 </button>
+            <button onclick=" number+='-' " id="-"> - </button>
+
+
+            <button onclick=" number+='1' " id="1"> 1 </button>
+            <button onclick=" number+='2' " id="2"> 2 </button>
+            <button onclick=" number+='3' " id="3"> 3 </button>
+            <button onclick=" number+='+' " id="+"> + </button>
+
+
+            <button onclick=" number+='00' " id="00"> 00 </button>
+            <button onclick=" number+='0' " id="0"> 0 </button>
+            <button onclick=" number+='.' " id="."> . </button>
+            <button onclick="ans()" id="="> = </button>
+        </div>
+    </div>
+
+    <script>
+        number = "";
+
+        function ans(){
+            textBox = document.getElementById("screen");
+            // textValue = textBox.value;
+            console.log(number);
+
+            textBox.value = eval(textBox.value);
+        }
+
+        function addNumber(value){
+            textBox.value += value;
+        }
+
+
+        function allClear(){
+            textBox.value = "";
+        }
+
+        function back(){
+            newNumber = "";
+
+            for(i = 0 ; i < number.length ; i++){
+                newNumber += number[i];
+            }
+            number = newNumber;
+            textBox.value = number;
+        }
+    </script>
+</body>
+</html>
