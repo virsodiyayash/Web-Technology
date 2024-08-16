@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function seen(){
+            if(true){
+                let a = 5; //it is a block scope.
+                c = 10;//It is used in any placee of program
+                var b = 7;//It is only used in between function
+                console.log(a);
+                console.log(b);
+            }
+
+            console.log(a);// Error         program gives us error at this place because it is a block scope you can't access that out of if statement
+            console.log(b);//Correct        it doesn't give error because it is function variable you can access it any place between the function
+            console.log(c);//Correct        it has no scope of variable it is used at any place of program
+        }
+
+        console.log(a);//Error           program gives us error at this place because it is a block scope you can't access that out of if statement
+        console.log(b);//Error           it is also gives us error because we doesn't access that out of function
+        console.log(c);//Correct         it doesn't gives us error
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        array = [1 , 2 , 3 , 4 , 5];
+
+        console.log("Answer is given by for each loop");
+
+        array.forEach(element => {
+            console.log(element);
+        });
+
+        console.log("answer is given by for of loop");
+
+        for(const i of array){
+            console.log(i);//it gives us only value of an array;
+        };
+
+        console.log("answer is given by for in loop");
+
+        for(const i in array){
+            console.log(i);//it gives us indexes of an array elements;
+        }
+    </script>
+</body>
+</html>
