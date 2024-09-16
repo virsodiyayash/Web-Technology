@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const Faculty = require('./Faculties');
 
-mongoose.connect('mongodb+srv://:@cluster0.kr9wp.mongodb.net/Lab_Test').then(() => {
+mongoose.connect('').then(() => {
     console.log('connect');
 
     const app = express();
